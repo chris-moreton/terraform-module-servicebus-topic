@@ -18,11 +18,11 @@
   "variables": {
     "sendAndListenKeyName": "SendAndListenSharedAccessKey",
     "sendAndListenAuthRuleResourceId": "[resourceId('Microsoft.ServiceBus/namespaces/topics/authorizationRules', parameters('serviceBusNamespaceName'), parameters('serviceBusTopicName'), variables('sendAndListenKeyName'))]",
-    "sbVersion": "2017-04-01"
+    "sbVersion": "2018-05-01"
   },
   "resources": [
     {
-      "apiVersion": "2017-04-01",
+      "apiVersion": "2018-05-01",
       "name": "[concat(parameters('serviceBusNamespaceName'), '/', parameters('serviceBusTopicName'))]",
       "type": "Microsoft.ServiceBus/namespaces/topics",
       "properties": {
@@ -38,7 +38,7 @@
       }
     },
     {
-      "apiVersion": "2017-04-01",
+      "apiVersion": "2018-05-01",
       "name": "[concat(parameters('serviceBusNamespaceName'), '/', parameters('serviceBusTopicName'), '/', variables('sendAndListenKeyName'))]",
       "type": "Microsoft.ServiceBus/namespaces/topics/authorizationRules",
       "dependsOn": [
