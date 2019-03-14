@@ -1,3 +1,7 @@
+provider "azurerm" {
+  version = "1.22.1"
+}
+
 # ARM template for Service Bus topic
 data "template_file" "topic_template" {
   template = "${file("${path.module}/template/topic_template.json")}"
